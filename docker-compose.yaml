@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  project_x:
+    build: ./Docker
+    container_name: "project_x"
+    command: ['python', '-u', 'flask_app.py']
+    environment:
+      HOST: "0.0.0.0"
+      PORT: 5010
+    restart: always
+    volumes:
+      - ./Docker/Flask_App/app_logs:/app/Flask_App/app_logs
+    ports:
+      - "5010:5010"
+    # mysql_network:
+    #   ipv4_address: 172.1.1.1
+    # depends_on:
+    #   - mysql
+    # networks:
+    #   - mysql_network
+
+# volumes:
+#   mysql-data:
+
+# networks:
+#   mysql_network:
+#     external: true

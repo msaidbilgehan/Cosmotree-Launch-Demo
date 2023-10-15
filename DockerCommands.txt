@@ -1,0 +1,6 @@
+sudo docker build -t project_x:latest ./Docker/
+sudo docker run -p 5010:5010 -v ./Docker/Flask_App/app_logs:/Flask_App/app_logs project_x
+
+---
+sudo docker run project_x
+sudo docker run -p 5010:5010  -v /path/on/host:/Flask_App/app_logs -v /path/on/host2:/CLI/app_logs project_x

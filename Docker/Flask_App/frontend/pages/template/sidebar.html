@@ -1,0 +1,25 @@
+<!-- Sidebar Start -->
+<div class="sidebar pe-4 pb-3">
+    <nav class="navbar bg-secondary navbar-dark">
+        <div class="logo-container">
+            <a href="{{ url_for('index') }}" class="navbar-brand mx-2 mb-3">
+                <img class="logo" src="{{ url_for('static', filename='img/treo-ana-logo-white.png') }}">
+            </a>
+        </div>
+
+        <div class="navbar-nav w-100">
+
+            <a href="{{ url_for('index') }}" class="nav-item nav-link">
+                <i class="fa fa-tachometer-alt me-2"></i>Main Page
+            </a>
+            <a href="{{ url_for('fqdn_page') }}" class="nav-item nav-link">
+                <i class="fa fa-tachometer-alt me-2"></i>FQDN Setup
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-item nav-link">
+                <i class="fa fa-tachometer-alt me-2"></i>About
+            </a>
+
+        </div>
+    </nav>
+</div>
+<!-- Sidebar End -->

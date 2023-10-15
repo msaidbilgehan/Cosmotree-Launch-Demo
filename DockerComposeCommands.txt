@@ -1,0 +1,4 @@
+sudo docker-compose up -d
+
+docker rm project_x
+docker rmi folder_name-project_x
