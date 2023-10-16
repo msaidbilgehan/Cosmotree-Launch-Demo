@@ -19,20 +19,20 @@ class Task_Handler_Class(ABC, Thread):
 
       self.safe_task_lock = Lock()
       self.task_stop_lock = Lock()
-      
+
       self.logger_file_path = logger_file_path
 
       if logger is None:
          self.create_Logger(
             level_stdo=logger_level_stdo,
             level_file=logger_level_file,
-            mode=mode, 
+            mode=mode,
             maxBytes=maxBytes,
             backupCount=backupCount
          )
       else:
          self.logger = logger
-      
+
       self.__parameters_template = {}
       self.parameters = self.__parameters_template.copy()
 
@@ -46,8 +46,8 @@ class Task_Handler_Class(ABC, Thread):
 
       # Configuration
       self.daemon = True
-            
-            
+
+
    def create_Logger(self, level_stdo: int = logging.DEBUG, level_file: int = logging.DEBUG, mode="a", maxBytes=5*1024*1024, backupCount=2) -> int:
       self.logger = logging.getLogger(self.name)
       self.logger.setLevel(logging.DEBUG)
@@ -67,44 +67,44 @@ class Task_Handler_Class(ABC, Thread):
 
          self.logger.addHandler(self.file_handler)
       return 0
-            
-   
+
+
    def get_Logger(self) -> logging.Logger:
       return self.logger
 
 
    def set_Logger(self, logger: logging.Logger):
         self.logger = logger
-    
-    
+
+
    def get_Logs(self):
       root_path_log = "/".join(self.logger_file_path.split("/")[:-1])
       log_file_name = self.logger_file_path.split("/")[-1]
       return [root_path_log + "/" + i for i in list_dir(root_path_log) if log_file_name in i]
-            
+
 
    def run(self) -> None:
       self.is_running = False
       self.is_finished = False
-      
+
       while not self.is_Thread_Stopped():
          while not self.is_Task_Stopped():
-            
+
             self.is_running = True
             self.is_finished = False
-            
+
             response = self.task(
                   **self.get_Parameters()
             )
-            
+
             self.is_running = False
-            
+
             if response == 0:
                self.logger.info("Task Finished Successfully")
                self.is_finished = True
             else:
                self.logger.warning("Task Manually Stopped")
-            
+
             self.stop_Task()
             time.sleep(1)
          time.sleep(1)
@@ -142,7 +142,7 @@ class Task_Handler_Class(ABC, Thread):
 
    def is_Running(self) -> bool:
       return self.is_running
-   
+
 
    def is_Thread_Stopped(self) -> bool:
       return self._flag_thread_stop
@@ -193,4 +193,3 @@ class Task_Handler_Class(ABC, Thread):
    def task(self):
       # Re-Write Task Function
       raise NotImplementedError
-   

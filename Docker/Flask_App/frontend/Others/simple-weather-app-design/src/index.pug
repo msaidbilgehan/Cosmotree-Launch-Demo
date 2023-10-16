@@ -1,0 +1,50 @@
+.container
+	.weather-side
+		.weather-gradient
+		.date-container
+			h2(class="date-dayname") Tuesday
+			span(class="date-day") 15 Jan 2019
+			i(class="location-icon" data-feather="map-pin")
+			span(class="location") Paris, FR
+		.weather-container
+			i(class="weather-icon" data-feather="sun")
+			h1(class="weather-temp") 29°C
+			h3(class="weather-desc") Sunny
+	.info-side
+		.today-info-container
+			.today-info
+				div(class="precipitation") 
+					span(class="title") PRECIPITATION
+					span(class="value") 0 %
+					.clear
+				div(class="humidity") 
+					span(class="title") HUMIDITY
+					span(class="value") 34 %
+					.clear
+				div(class="wind") 
+					span(class="title") WIND
+					span(class="value") 0 km/h
+					.clear
+		.week-container
+			ul(class="week-list")
+				li(class="active")
+					i(class="day-icon" data-feather="sun")
+					span(class="day-name") Tue
+					span(class="day-temp") 29°C
+				li
+					i(class="day-icon" data-feather="cloud")
+					span(class="day-name") Wed
+					span(class="day-temp") 21°C
+				li
+					i(class="day-icon" data-feather="cloud-snow")
+					span(class="day-name") Thu
+					span(class="day-temp") 08°C
+				li
+					i(class="day-icon" data-feather="cloud-rain")
+					span(class="day-name") Fry
+					span(class="day-temp") 19°C
+				.clear
+		.location-container
+			button(class="location-button") 
+				i(data-feather="map-pin")
+				span Change location

@@ -15,21 +15,16 @@
         {% include 'template/header.html' %}
     </header>
     <div class="container-fluid position-relative d-flex p-2">
-        {% include 'template/notification.html' %}
         {% include 'template/spinner.html' %}
-        {% include 'template/sidebar.html' %}
-        <div class="content">
-            {% include 'template/navbar.html' %}
-            
+        <div class="content center-all">
             <main>
                 {% block content %}
                 {% endblock %}
             </main>
-        {% include 'template/footer.html' %}
+            <div class="footer_container">
+                {% include 'template/footer.html' %}
+            </div>
         </div>
-        
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 </body>
 
