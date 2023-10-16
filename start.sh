@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dizine git
-cd ~/Cosmotree_Experiment/Docker
+cd ~/Cosmotree_Expertiment/Docker
 
 # Python Flask uygulamasını başlat
 python flask_app.py &
