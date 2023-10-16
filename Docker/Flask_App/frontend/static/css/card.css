@@ -3,7 +3,9 @@
 :root {
 	--gradient: linear-gradient( 135deg, #44824d 10%, #194d25 100%);
 }
-
+::-webkit-scrollbar {
+	display: none;
+}
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -30,6 +32,7 @@ body {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	scrollbar-width: none;
 }
 
 .center_container {
