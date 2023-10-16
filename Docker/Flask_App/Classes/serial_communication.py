@@ -68,7 +68,7 @@ class SerialObject():
         air_quality = 35
 
         while True:
-            time.sleep(0.5)
+            time.sleep(3)
             light_level = analog_value
 
             if light_level < 105:
