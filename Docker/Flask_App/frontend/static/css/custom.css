@@ -32,10 +32,13 @@
 }
 
 .logo {
-    width: 100px;
+    width: 200px;
     height: auto;
     margin: 0 auto;
     display: block;
+    border-radius: 20px;
+    background-color: white;
+    
 }
 
 @media (max-width: 576px) {

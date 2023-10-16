@@ -9,6 +9,6 @@ python flask_app.py &
 # Chromium'u belirtilen adreste aç
 # Birkaç saniye bekleme süresi ekledik, Flask uygulamasının başlaması için
 sleep 2
-chromium-browser 127.0.0.1:5005 &
+chromium-browser --start-fullscreen 127.0.0.1:5005 &
 
 exit 0
