@@ -33,6 +33,11 @@ body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	scrollbar-width: none;
+
+	background-image: url(https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);
+		background-position: center;
+		background-size: cover;
+		backdrop-filter: blur(5px);
 }
 
 .center_container {
