@@ -79,8 +79,8 @@ class SerialObject():
 
         while True:
             time.sleep(2)
-            producing_o2 += .003
-            carbon_footprint_recycle += .004
+            producing_o2 += .0004
+            carbon_footprint_recycle += .0007
 
 
             light_level = analog_value
