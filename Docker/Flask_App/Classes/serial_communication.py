@@ -2,6 +2,7 @@
 _summary_
 """
 import json
+import random
 import threading
 import time
 from typing import Union
@@ -85,6 +86,16 @@ class SerialObject():
             producing_o2 += 7/3600/sleep_time
             carbon_footprint_recycle += 10/3600/sleep_time
 
+            if temperature_environment > 21.5:
+                temperature_environment -= 0.001
+            else:
+                temperature_environment += 0.002
+
+            if temperature_water < 21.8:
+                temperature_water += 0.001
+            else:
+                temperature_water -= 0.002
+
             light_level = analog_value
 
             if light_level < 105:
@@ -111,8 +122,8 @@ class SerialObject():
                     "oxygen": oxygen,
                     "co2": co2,
                     "humidity": humidity,
-                    "temperature_environment": temperature_environment,
-                    "temperature_water": temperature_water,
+                    "temperature_environment": round(temperature_environment, 1),
+                    "temperature_water": round(temperature_water, 1),
                     "producing_o2": round(producing_o2, 2),
                     "carbon_footprint_recycle": round(carbon_footprint_recycle, 2),
                 }
