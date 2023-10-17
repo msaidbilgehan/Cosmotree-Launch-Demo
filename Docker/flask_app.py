@@ -2,14 +2,22 @@ import json
 import os
 
 from flask import Flask, jsonify, request, send_from_directory, render_template, Response
+# from flask_cors import CORS
 
 from Flask_App.paths import app_path
 from Flask_App.Classes.serial_communication import SerialObject
 
 
-
 app = Flask(__name__, template_folder=f'{app_path}frontend/pages', static_folder=f'{app_path}frontend/static')
+# CORS(app, resources={r"*": {"origins": "*"}})
+
 # serial_object = SerialObject()
+
+
+# @app.after_request
+# def add_header(response):
+#     response.headers['Access-Control-Allow-Origin'] = '*'
+#     return response
 
 
 #############
@@ -37,7 +45,7 @@ def card():
 
 @app.route('/api_serial/',methods = ['POST', 'GET'])
 def api_serial():
-    """ Serial APU """
+    """ Serial API """
 
     return Response(
         SerialObject.read_yield_simulate(),

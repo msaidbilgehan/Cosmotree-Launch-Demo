@@ -34,10 +34,12 @@ body {
 	        justify-content: center;
 	scrollbar-width: none;
 
-	background-image: url(https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);
-		background-position: center;
-		background-size: cover;
-		backdrop-filter: blur(5px);
+	/* background-image: url({{ url_for('static', filename='img/forest.jpeg')}}); */
+	background-image: url('/static/img/forest.jpeg');
+	 /* background-image:url(https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80); */
+	background-position: center;
+	background-size: cover;
+	backdrop-filter: blur(5px);
 }
 
 .center_container {
@@ -65,7 +67,10 @@ body {
 	position: relative;
 	height: 100%;
 	border-radius: 25px;
-	background-image: url("https://images.unsplash.com/photo-1527701963793-33e969bca5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2815&q=80");
+	/* background-image: url({{ url_for('static', filename='img/forest-2.jpeg')}}); */
+	background-image: url('/static/img/forest-2.jpeg');
+	/* background-image: url("https://images.unsplash.com/photo-1527701963793-33e969bca5ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2815&q=80"); */
+
 	width: 300px;
 	-webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
 	        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);

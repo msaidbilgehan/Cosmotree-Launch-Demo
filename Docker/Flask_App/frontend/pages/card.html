@@ -35,39 +35,44 @@
                     <div class="week-container">
                         <ul class="week-list">
                             <li class="week-item beauty_text_container">
-                                <!-- <img width="50" height="50" src="https://img.icons8.com/external-yogi-aprelliyanto-flat-yogi-aprelliyanto/64/external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4.png" alt="external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4"/> -->
-                                <img width="50" height="50" src="https://img.icons8.com/wired/64/chevron-up.png" alt="chevron-up" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/chevron-up.png') }}" alt="chevron-up" />
                                 <span class="day-name">Popülasyon</span>
-                                <div id="population" >%26</div>
+                                <div id="population" >- %</div>
+                                <!-- <div id="population">%26</div> -->
                             </li>
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/100/external-change-climate-change-ecology-others-pike-picture-22.png" alt="external-change-climate-change-ecology-others-pike-picture-22"/>
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/climate.png') }}" alt="external-change-climate-change-ecology-others-pike-picture-22"/>
                                 <span class="day-name">O2</span>
-                                <div id="oxygen" >%88</div>
+                                <div id="oxygen" >- %</div>
+                                <!-- <div id="oxygen">%88</div> -->
                             </li>
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/co2.png" alt="co2" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/co2.png') }}" alt="co2" />
                                 <span class="day-name">CO2</span>
-                                <div id="co2" >%12</div>
+                                <div id="co2" >- %</div>
+                                <!-- <div id="co2">%12</div> -->
                             </li>
                         </ul>
                     </div>
                     <div class="week-container">
                         <ul class="week-list">
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/000000/humidity.png" alt="humidity" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/humidity.png') }}" alt="humidity" />
                                 <span class="day-name">Nem Oranı</span>
-                                <div id="humidity">%77</div>
+                                <div id="humidity">- %</div>
+                                <!-- <div id="humidity">%77</div> -->
                             </li>
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/temperature--v1.png" alt="temperature--v1" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/temperature--v1.png') }}" alt="temperature--v1" />
                                 <span class="day-name">Ortam Sıcaklığı</span>
-                                <div id="temperature-environment" >21°C</div>
+                                <div id="temperature-environment" >- °C</div>
+                                <!-- <div id="temperature-environment">21°C</div> -->
                             </li>
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/carbon-copy/100/temperature.png" alt="temperature" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/temperature.png') }}" alt="temperature" />
                                 <span class="day-name">Su Sıcaklığı</span>
-                                <div id="temperature-water" >21°C</div>
+                                <div id="temperature-water" >- °C</div>
+                                <!-- <div id="temperature-water" >21°C</div> -->
                             </li>
                         </ul>
                     </div>
@@ -77,14 +82,16 @@
                     <div class="week-container">
                         <ul class="week-list">
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/100/external-ecology-recycle-factory-ecology-others-pike-picture-4.png" alt="external-change-climate-change-ecology-others-pike-picture-22"/>
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/o2cycle.png') }}" alt="o2cycle"/>
                                 <span class="day-name">Günlük Oksijen Üretimi</span>
-                                <div id="humidity">16.8 litre</div>
+                                <div id="producing-o2">- gr</div>
+                                <!-- <div id="producing-o2">55.74 gr</div> -->
                             </li>
                             <li class="week-item beauty_text_container">
-                                <img width="50" height="50" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-carbon-footprint-automotive-dealership-flaticons-lineal-color-flat-icons.png" alt="co2" />
+                                <img width="50" height="50" src="{{ url_for('static', filename='img/carbon-footprint.png') }}" alt="carbon-footprint" />
                                 <span class="day-name">Karbon Ayak İzi Azaltma</span>
-                                <div id="temperature-environment">1.8 kg</div>
+                                <div id="carbon-footprint-recycle">- gr</div>
+                                <!-- <div id="carbon-footprint-recycle">79.83 gr</div> -->
                             </li>
                         </ul>
                     </div>

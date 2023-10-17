@@ -63,12 +63,26 @@ class SerialObject():
         analog_value = 256
         current_time = 123456
         temperature = 25.5
-        humidity = 45.6
+        humidity = 77.7
         water_temperature = 24.8
         air_quality = 35
 
+        # Re-assign values
+        population = 26
+        oxygen = 88
+        co2 = 12
+        humidity = 77.7
+        temperature_environment = 21.5
+        temperature_water = 21.8
+        producing_o2 = 55.74
+        carbon_footprint_recycle = 79.83
+
         while True:
-            time.sleep(3)
+            time.sleep(2)
+            producing_o2 += .003
+            carbon_footprint_recycle += .004
+
+
             light_level = analog_value
 
             if light_level < 105:
@@ -84,14 +98,24 @@ class SerialObject():
                     "analog_value": analog_value,
                     "current_time": current_time,
                     "temperature": temperature,
-                    "humidity": humidity,
+                    # "humidity": humidity,
                     "water_temperature": water_temperature,
                     "air_quality": air_quality,
                     "light_level": light_level,
                     "light_status": light_status,
+
+                    # Re-assign values
+                    "population": population,
+                    "oxygen": oxygen,
+                    "co2": co2,
+                    "humidity": humidity,
+                    "temperature_environment": temperature_environment,
+                    "temperature_water": temperature_water,
+                    "producing_o2": round(producing_o2, 2),
+                    "carbon_footprint_recycle": round(carbon_footprint_recycle, 2),
                 }
             )
-            yield _output
+            yield "data: " + _output + "\n\n"
 
     def task(self):
         """ Thread Task """
