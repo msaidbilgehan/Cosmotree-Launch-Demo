@@ -6,65 +6,96 @@
         <div class="weather-side">
             <div class="weather-gradient"></div>
             <div class="date-container">
-                <span class="location unselectable">Bitki Adı</span>
-                <h2 id="name" class="date-dayname unselectable">Tomurcuk</h2>
-                <span class="location unselectable">Geçen Süre</span>
-                <h3 id="passed-time" class="date-dayname unselectable">14 Gün</h3>
+                <h3 id="name" class="date-dayname">Alg Bilgisi</h3>
+                <h6 id="name" class="date-dayname">Cholorella Vulgaris: %100</h6>
+                <h6 id="name" class="date-dayname">Dinoflagletta P. F. : %0</h6>
+                <span class="location">Geçen Süre</span>
+                <h3 id="passed-time" class="date-dayname">16 Gün</h3>
             </div>
             <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
-                <span class="location unselectable">Genel Skor</span>
-                <h3 id="score" class="weather-temp unselectable">90%</h3>
-                <span class="location unselectable">Genel Durum</span>
-                <h1 id="status" class="weather-desc unselectable">Sağlıklı</h1>
+                <span class="location">Genel Skor</span>
+                <h3 id="score" class="weather-temp">90%</h3>
+                <span class="location">Genel Durum</span>
+                <h1 id="status" class="weather-desc">Sağlıklı</h1>
             </div>
         </div>
+
         <div class="info-side">
                 <div class="col-sm-12 col-xl-12 align_item_center w100 beauty_padding">
                     <div class="bg-success rounded beauty_text_container">
-                        <span class="beauty_text unselectable">
+                        <span class="beauty_text">
                             Ölçüm Değerleri
                         </span>
                     </div>
                 </div>
 
-            <div class="week-container">
-                <ul class="week-list">
-                    <li class="week-item beauty_text_container">
-                        <!-- <img width="50" height="50" src="https://img.icons8.com/external-yogi-aprelliyanto-flat-yogi-aprelliyanto/64/external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4.png" alt="external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4"/> -->
-                        <img width="50" height="50" src="https://img.icons8.com/wired/64/chevron-up.png" alt="chevron-up" />
-                        <span class="day-name">Popülasyon</span>
-                        <div id="population" >%26</div>
-                    </li>
-                    <li class="week-item beauty_text_container">
-                        <img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/100/external-change-climate-change-ecology-others-pike-picture-22.png" alt="external-change-climate-change-ecology-others-pike-picture-22"/>
-                        <span class="day-name">O2</span>
-                        <div id="oxygen" >%88</div>
-                    </li>
-                    <li class="week-item beauty_text_container">
-                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/co2.png" alt="co2" />
-                        <span class="day-name">CO2</span>
-                        <div id="co2" >%12</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="week-container">
-                <ul class="week-list">
-                    <li class="week-item beauty_text_container">
-                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/000000/humidity.png" alt="humidity" />
-                        <span class="day-name">Nem Oranı</span>
-                        <div id="humidity">%77</div>
-                    </li>
-                    <li class="week-item beauty_text_container">
-                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/temperature--v1.png" alt="temperature--v1" />
-                        <span class="day-name">Ortam Sıcaklığı</span>
-                        <div id="temperature-environment" >21°C</div>
-                    </li>
-                    <li class="week-item beauty_text_container">
-                        <img width="50" height="50" src="https://img.icons8.com/carbon-copy/100/temperature.png" alt="temperature" />
-                        <span class="day-name">Su Sıcaklığı</span>
-                        <div id="temperature-water" >21°C</div>
-                    </li>
-                </ul>
+            <div class="flip">
+                <div class="front">
+                    <div class="week-container">
+                        <ul class="week-list">
+                            <li class="week-item beauty_text_container">
+                                <!-- <img width="50" height="50" src="https://img.icons8.com/external-yogi-aprelliyanto-flat-yogi-aprelliyanto/64/external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4.png" alt="external-trophy-award-yogi-aprelliyanto-flat-yogi-aprelliyanto-4"/> -->
+                                <img width="50" height="50" src="https://img.icons8.com/wired/64/chevron-up.png" alt="chevron-up" />
+                                <span class="day-name">Popülasyon</span>
+                                <div id="population" >%26</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/100/external-change-climate-change-ecology-others-pike-picture-22.png" alt="external-change-climate-change-ecology-others-pike-picture-22"/>
+                                <span class="day-name">O2</span>
+                                <div id="oxygen" >%88</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/co2.png" alt="co2" />
+                                <span class="day-name">CO2</span>
+                                <div id="co2" >%12</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="week-container">
+                        <ul class="week-list">
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/000000/humidity.png" alt="humidity" />
+                                <span class="day-name">Nem Oranı</span>
+                                <div id="humidity">%77</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/temperature--v1.png" alt="temperature--v1" />
+                                <span class="day-name">Ortam Sıcaklığı</span>
+                                <div id="temperature-environment" >21°C</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/carbon-copy/100/temperature.png" alt="temperature" />
+                                <span class="day-name">Su Sıcaklığı</span>
+                                <div id="temperature-water" >21°C</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="week-container">
+                        <ul class="week-list">
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/000000/humidity.png"
+                                    alt="humidity" />
+                                <span class="day-name">ss</span>
+                                <div id="humidity">%77</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/100/temperature--v1.png"
+                                    alt="temperature--v1" />
+                                <span class="day-name">aa</span>
+                                <div id="temperature-environment">21°C</div>
+                            </li>
+                            <li class="week-item beauty_text_container">
+                                <img width="50" height="50" src="https://img.icons8.com/carbon-copy/100/temperature.png"
+                                    alt="temperature" />
+                                <span class="day-name">dd</span>
+                                <div id="temperature-water">21°C</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
             <!-- <div class="location-container">
                 <button class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
@@ -74,6 +105,7 @@
 </div>
 
 <link href="{{ url_for('static', filename='css/card.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/flip_card.css') }}" rel="stylesheet">
 <script src="{{ url_for('static', filename='js/card.js') }}" type="module"></script>
 
 
